@@ -2,11 +2,17 @@
 
 ## Current status
 
-Supabase project is not wired yet.
+Supabase staging project exists.
 
-## Required project
+Project URL:
 
-Create staging first:
+```txt
+https://axwxxvpgahueenwhhhwp.supabase.co
+```
+
+## Required projects
+
+Staging:
 
 ```txt
 prestige-serviceos-staging
@@ -26,6 +32,12 @@ Safe to expose in frontend:
 
 ```txt
 NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+```
+
+Compatibility alias if older examples/components expect it:
+
+```txt
 NEXT_PUBLIC_SUPABASE_ANON_KEY
 ```
 
@@ -33,6 +45,20 @@ Server-side only:
 
 ```txt
 SUPABASE_SERVICE_ROLE_KEY
+```
+
+## Supabase package setup
+
+Once the Next.js app exists, install:
+
+```bash
+npm install @supabase/supabase-js @supabase/ssr
+```
+
+Optional Supabase shadcn helper:
+
+```bash
+npx shadcn@latest add @supabase/supabase-client-nextjs
 ```
 
 ## Migration policy
